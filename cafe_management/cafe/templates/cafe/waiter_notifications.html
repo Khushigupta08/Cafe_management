@@ -1,0 +1,10 @@
+
+{% block content %}
+<h1>Notifications</h1>
+<ul>
+    {% for notification in notifications %}
+        <li>{{ notification.message }} - {{ notification.created_at }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'waiter_order_form' %}">Back to Order Form</a>
+{% endblock %}

@@ -1,0 +1,158 @@
+/* sidebar */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color:#0c2340;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    color: whitesmoke;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    color:whitesmoke;
+  }
+   .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+ @media (min-width:576px)and (max-width:768px){
+  .sidebar{
+    visibility: hidden !important;
+    }
+   }
+   
+  @media (min-width:576px)and (max-width:768px){
+  .bt{
+   visibility: visible !important;
+  }
+  .openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color:#0c2340;
+  color: white;
+  padding-right:934px !important;
+  border: none;
+  width: 100%;
+  }
+  a{
+    text-decoration: none;
+    color:white;
+  }
+  li{
+    list-style: none;
+  }
+  .offcanvas-body{
+    background-color:#0c2340 ;
+    padding-top: 10px;
+  }
+  .offcanvas{
+    width:30% !important;
+  }
+  li{
+    padding-top: 20px !important;
+  }
+  }
+   
+  .bt{
+   visibility: hidden;
+   }
+  button{
+   background-color: whitesmoke;
+     }
+  li{
+  list-style: none;
+  }
+  .content{
+  margin-left:200px;
+  padding: 1px 16px;
+  height: 1000px;
+  margin-top:-37px;
+  background-color: #f0f3fb;
+}
+.hstack{
+  padding-top:5px;
+}
+
+.box{
+  height: 100px;
+  width:200px;
+  /* margin:auto; */
+  margin-top: 10px;
+  margin-left: 100px;
+  background-color:#219ebc;
+}
+::placeholder{
+  background-color: white;
+}
+
+
+.top-nav{
+  background-color:#0c2340;
+  margin-left:-22px;
+  margin-top: -5px;
+  width: 103%;
+  height:60px;
+}
+
+/* teacher   and all  */
+.gap-3{
+    gap:0rem !important
+  }
+  h3{
+    text-align: center;
+  }
+  /* student */
+  .dropdown-menu{
+    padding-left: 30px;
+    width: 20%;
+  }
+  .modal-header{
+    background-color: goldenrod !important;
+  }
+  .table{
+  width:95% !important;
+  margin-left:30px ;
+  }
+  #hstack{
+    margin-left: 20px;
+  }
+
+  /* all pages */
+
+  @media (min-width:768px) and (max-width:992px){
+    .content{
+     width:114%;
+    }
+    .top-nav{
+      width:103% !important;
+    }
+    .box{
+      margin-top: 10px !important;
+      margin-left: 50px !important;
+    }
+  }
+  @media (max-width:768px){
+    .content{
+      width: 130%;
+      margin-top:4px;
+      margin-left:3px;
+    }
+    .top-nav{
+      display: none;
+    }
+    .openbtn{
+      width:130% !important;
+    }
+    .box{
+      margin-top: 10px !important;
+      margin-left: 20px !important;
+    }
+  }
+  

@@ -1,0 +1,24 @@
+{% include 'cafe/header.html' %}
+<div class="container-fluid top-nav">
+    <div class="hstack gap-3">
+      
+      <div class="p-2 ms-auto"><i class='fas fa-bell' style='font-size:24px;color:white;'></i>
+      </div>
+      <div class="p-2"><a href="loginpage.html"><i class='fas fa-power-off' style='font-size:24px;color:white;'></i></a>
+      </div>
+  
+    </div>
+  </div><br><br>
+<div class="content">
+{% block content %}
+<h3 class="text-center mt-3">Add Menu Item</h3>
+<form method="POST">
+    {% csrf_token %}
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"><strong>Dish Name</strong></label>
+    <input type="text" name="name" class="form-control col-sm-2" placeholder="Item Name" required><br>
+    <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"><strong>Price</strong></label>
+    <input type="number" name="price" placeholder="Price" class="form-control" step="0.01" required><br>
+    <button type="submit" class="btn btn-dark">Add Item</button>
+</form>
+{% endblock %}
+</div>

@@ -1,0 +1,42 @@
+<style>
+    .menu{
+        border:1px solid black;
+        height:400px;
+        width:400px;
+    }
+</style>
+{% include 'cafe/header.html' %}
+<div class="container-fluid top-nav">
+    <div class="hstack gap-3">
+      <div class="p-2"><input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      </div>
+      <div class="p-2 ms-auto"><i class='fas fa-bell' style='font-size:24px;color:white;'></i>
+      </div>
+      <div class="p-2"><i class='fas fa-envelope' style='font-size:24px;color:white;'></i>
+      </div>
+      <div class="p-2"><a href="loginpage.html"><i class='fas fa-power-off' style='font-size:24px;color:white;'></i></a>
+      </div>
+  
+    </div>
+  </div><br><br>
+<div class="content">
+{% block content %}<br>
+  <button class="btn btn-dark"><a href="{% url 'add_menu_item' %}" style="text-decoration:none;color:white;">Add Menu Item</a></button><br><br>
+<div class="container menu">
+ <h2 style="text-align:center;">Menu Items</h2><hr>
+    {% for item in menu_items %}
+    <div class="row">
+        <div class="col-lg-4 text-center">
+         <h5>{{ item.name }}</h5>        
+        </div>
+
+        <div class="col-lg-4 text-center">
+           <h5>{{ item.price }}</h5>
+        </div>
+        <div class="col-lg-4 text-center">
+          <button class="btn btn-dark btn-sm"><a href="/cafe/menu/delete/{{item.id}}" style="text-decoration:none;color:white">Delete</a></button>
+       </div>
+    </div>
+    {% endfor %}
+    {% endblock %}
+</div>
